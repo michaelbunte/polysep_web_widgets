@@ -193,7 +193,7 @@ function WaterConsumption() {
                     background: "white",
                     minWidth: "300px",
                     maxWidth: "310px",
-                    padding: "20px 20px",
+                    padding: "20px 10px",
                     margin: "0px 20px"
                 }}>
                     <div style={{textAlign: "center"}}><b>Guidelines</b></div>
