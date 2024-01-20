@@ -1,0 +1,23 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+webtools-client/node_modules
+webtools-client/.pnp
+webtools-client/.pnp.js
+
+# testing
+webtools-client/coverage
+
+# production
+webtools-client/build
+
+# misc
+webtools-client/.DS_Store
+webtools-client/.env.local
+webtools-client/.env.development.local
+webtools-client/.env.test.local
+webtools-client/.env.production.local
+
+webtools-client/npm-debug.log*
+webtools-client/yarn-debug.log*
+webtools-client/yarn-error.log*
