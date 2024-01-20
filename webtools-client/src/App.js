@@ -22,7 +22,7 @@ function InputComponent({
 }) {
 
   const is_valid = parseInt(inner_value) >= min && parseInt(inner_value) <= max;
-  const error_style = is_valid || inner_value === "" ? { color: "rgba(0,0,0,0)" } : { color: "#ff6868" };
+  const error_style = is_valid || inner_value === "" ? { color: "rgba(0,0,0,0)", userSelect: "none" } : { color: "#ff6868"};
 
   return (
     <div style={{
