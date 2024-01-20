@@ -21,7 +21,7 @@ function InputComponent({
   max = 10
 }) {
 
-  const is_valid = parseInt(inner_value) >= min && parseInt(inner_value) <= max;
+  const is_valid = parseFloat(inner_value) >= min && parseFloat(inner_value) <= max;
   const error_style = is_valid || inner_value === "" ? { color: "rgba(0,0,0,0)", userSelect: "none" } : { color: "#ff6868"};
 
   return (
@@ -149,7 +149,7 @@ function App() {
 
   function update_value(field_name) {
     return (e) => {
-      const re = /^-?[0-9\b]*$/;
+      const re = /^-?[0-9]*\.?[0-9]*$/;
       if (re.test(e.target.value) || e.target.value === "") {
         set_form_values((old) => ({ ...old, [field_name]: { ...old[field_name], "value": e.target.value } }))
       }
@@ -180,9 +180,9 @@ function App() {
   // Sums up all of the invalid fields and checks if it's equal to 0
   let all_fields_valid = Object.keys(form_values).map(
     key => (form_values[key]["type"] === "text" &&
-      (parseInt(form_values[key]["value"]) > form_values[key]["max"] ||
-        parseInt(form_values[key]["value"]) < form_values[key]["min"] ||
-        Number.isNaN(parseInt(form_values[key]["value"])))
+      (parseFloat(form_values[key]["value"]) > form_values[key]["max"] ||
+      parseFloat(form_values[key]["value"]) < form_values[key]["min"] ||
+        Number.isNaN(parseFloat(form_values[key]["value"])))
     ) ? 1 : 0
   ).reduce((x, y) => x + y, 0) === 0;
 
