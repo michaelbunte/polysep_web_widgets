@@ -83,6 +83,8 @@ function WaterConsumption() {
             onChange={item => set_pryor_farms_range([item.selection])}
             moveRangeOnFirstSelection={false}
             ranges={pryor_farms_range}
+            months={2}
+            direction="horizontal"
         />
     </div>
     const santa_teresa_date_picker = <div style={{ height: "380px" }}>
@@ -91,6 +93,8 @@ function WaterConsumption() {
             onChange={item => set_santa_teresa_range([item.selection])}
             moveRangeOnFirstSelection={false}
             ranges={santa_teresa_range}
+            months={2}
+            direction="horizontal"
         />
     </div>
 
